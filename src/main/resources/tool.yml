@@ -1,0 +1,5 @@
+tools:
+  "my pickaxe":
+    material: WOODEN_PICKAXE
+    display_name: "我的镐"
+    item_model: my_pickaxe

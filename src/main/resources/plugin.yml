@@ -1,0 +1,100 @@
+name: novaspace
+version: '1.0-SNAPSHOT'
+main: blackwolf155.novaspace.Novaspace
+api-version: '1.21'
+authors: [ blackwolf155 ]
+description: 这是星域服务器专用插件
+
+default-permission: op
+
+permissions:
+  novaspace.manager:
+    description: "管理员权限"
+    default: op
+  novaspace.player:
+    description: "基础玩家权限"
+    default: true
+    children:
+      novaspace.xyhelp: true
+      novaspace.menu: true
+      novaspace.get: true
+      novaspace.killme: true
+      novaspace.nsgamemode: true
+      novaspace.shop: true
+
+
+  novaspace.xyhelp:
+    description: "基础权限"
+    default: false
+  novaspace.menu:
+    description: "基础权限"
+    default: false
+  novaspace.get:
+    description: "基础权限"
+    default: false
+  novaspace.killme:
+    description: "基础权限"
+    default: false
+  novaspace.nsgamemode:
+    description: "基础权限"
+    default: false
+  novaspace.shop:
+    description: "基础权限"
+    default: false
+
+commands:
+  #插件指令
+  test:
+    description: "星域服务器测试专用指令"
+    usage: "/test"
+    aliases: t
+    permission: novaspace.manager
+    permission-message: "你没有使用此命令的权限"
+  nsget:
+    description: "获取测试物品"
+    usage: "/nsget <testItem>"
+    aliases: ng
+    permission: novaspace.manager
+    permission-message: "你没有使用此命令的权限"
+
+
+  nshelp:
+    description: "星域插件帮助"
+    usage: "/nshelp"
+    aliases: h
+    permission: novaspace.xyhelp
+    permission-message: "你没有使用此命令的权限"
+  menu:
+    description: "打开星域服务器菜单"
+    usage: "/menu"
+    aliases: m
+    permission: novaspace.player
+    permission-message: "你没有使用此命令的权限"
+  get:
+    description: "获取一些物品"
+    usage: "用法：/get [物品] [数量] (输入/get list查看可获取的物品列表)"
+    aliases: g
+    permission: novaspace.get
+    permission-message: "你没有使用此命令的权限"
+  killme:
+    description: "自我了结"
+    usage: "/killme"
+    aliases: km
+    permission: novaspace.killme
+    permission-message: "你没有使用此命令的权限"
+  nsgamemode:
+    description: "设置游戏模式"
+    usage: "用法：/nsgamemode [游戏模式] (0为生存模式、2为冒险模式、3为旁观模式)"
+    aliases: gm
+    permission: novaspace.nsgamemode
+    permission-message: "你没有使用此命令的权限"
+  shop:
+    description: "打开商店界面"
+    usage: "/shop"
+    aliases: p
+    permission: novaspace.shop
+    permission-message: "你没有使用此命令的权限"
+
+
+
+

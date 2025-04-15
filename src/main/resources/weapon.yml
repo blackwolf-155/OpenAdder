@@ -1,0 +1,5 @@
+weapons:
+  my_sword:
+    material: WOODEN_SWORD
+    display_name: "我的剑"
+    item_model: my_sword
